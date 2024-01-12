@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #btn1
+        {
+            padding: 10px;
+            border-radius: 20px;
+            border: none;
+            color: white;
+            background-color: black;
+            font-size: larger;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+        #btn1:hover
+        {
+            box-shadow: 10px 8px 10px 0px black;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 id="title">MY Theme</h1>
+
+    <button onclick="mytheme()" id="btn1">Chance</button>
+
+    <script>
+        var one=false; 
+        function mytheme()
+        {
+            one=!one;
+            if(one)
+            {
+                document.body.style.backgroundColor="black";
+                document.getElementById('title').style.color="White";
+                document.getElementById('btn1').style.color="black";
+                document.getElementById('btn1').style.backgroundColor="white";
+            }
+            else
+            {
+                document.body.style.backgroundColor="white"
+                document.getElementById('title').style.color="black";
+                document.getElementById('btn1').style.color="white";
+                document.getElementById('btn1').style.backgroundColor="black";
+
+            }
+        }
+    </script>
+</body>
+</html>
