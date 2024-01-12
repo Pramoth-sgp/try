@@ -15,9 +15,9 @@
             font-size: larger;
             font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
         }
-        #btn1:hover
+        #btn1:active
         {
-            box-shadow: 10px 8px 10px 0px black;
+            transform: scale(.5);
         }
     </style>
 </head>
@@ -25,7 +25,7 @@
 <body>
     <h1 id="title">MY Theme</h1>
 
-    <button onclick="mytheme()" id="btn1">Chance</button>
+    <button onclick="mytheme()" id="btn1">DARK</button>
 
     <script>
         var one=false; 
@@ -38,15 +38,19 @@
                 document.getElementById('title').style.color="White";
                 document.getElementById('btn1').style.color="black";
                 document.getElementById('btn1').style.backgroundColor="white";
+                document.getElementById('btn1').textContent="LIGHT";
             }
             else
             {
                 document.body.style.backgroundColor="white"
                 document.getElementById('title').style.color="black";
-                document.getElementById('btn1').style.color="white";
                 document.getElementById('btn1').style.backgroundColor="black";
+                document.getElementById('btn1').style.color="white";
+                document.getElementById('btn1').textContent="DARK";
 
             }
+
+            document.getElementById('title').style.transform.slice="2px";
         }
     </script>
 </body>
